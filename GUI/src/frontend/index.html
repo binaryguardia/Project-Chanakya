@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Swipe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen relative">
+    <div class="absolute top-4 left-4 bg-lime-400 text-black font-bold py-4 px-8 rounded text-xl">
+        Cyber Swipe
+    </div>
+    <div class="absolute top-4 left-1/2 transform -translate-x-1/2 bg-gray-300 text-black font-bold py-6 px-12 rounded text-4xl">
+        Project Chanakya
+    </div>
+    <div class="w-full max-w-5xl mx-auto p-4">
+        <div class="flex justify-between items-start space-x-6">
+            <div class="flex flex-col space-y-6 w-1/4">
+                <div class="bg-yellow-400 text-black font-bold py-4 px-8 rounded text-xl">
+                    Evidence Based Analysis
+                </div>
+                <div class="bg-orange-400 text-black font-bold py-4 px-8 rounded text-xl">
+                    Fingerprint
+                </div>
+                <div class="bg-orange-400 text-black font-bold py-4 px-8 rounded text-xl">
+                    DNA
+                </div>
+                <div class="bg-orange-400 text-black font-bold py-4 px-8 rounded text-xl">
+                    Hair
+                </div>
+                <div class="bg-orange-400 text-black font-bold py-4 px-8 rounded text-xl">
+                    Images/Media
+                </div>
+            </div>
+            <div class="flex flex-col items-center space-y-6 w-1/2">
+                <div class="flex space-x-6 w-full justify-center">
+                    <div class="bg-blue-400 text-black font-bold py-4 px-8 rounded text-xl cursor-pointer clickable">
+                        Check your Machine Health
+                    </div>
+                    <div class="bg-blue-400 text-black font-bold py-4 px-8 rounded text-xl cursor-pointer clickable">
+                        Check for external Drives
+                    </div>
+                </div>
+                <div class="bg-yellow-400 text-black font-bold py-4 px-8 rounded text-xl w-full text-center">
+                    Filter Result
+                </div>
+                <div class="bg-blue-400 text-black font-bold py-4 px-8 rounded flex flex-col items-center text-xl w-full">
+                    <div>Get The Report</div>
+                    <div class="flex space-x-4 mt-2">
+                        <button class="bg-white text-black font-bold py-2 px-6 rounded">Download</button>
+                        <button class="bg-white text-black font-bold py-2 px-6 rounded">Preview</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-6 w-1/4">
+                <div class="bg-lime-400 text-black font-bold py-4 px-8 rounded text-xl">
+                    Menu
+                </div>
+                <div class="bg-lime-400 text-black font-bold py-4 px-8 rounded text-xl">
+                    Help
+                </div>
+                <div class="bg-lime-400 text-black font-bold py-4 px-8 rounded text-xl">
+                    Contact
+                </div>
+                <div class="bg-lime-400 text-black font-bold py-4 px-8 rounded text-xl">
+                    Know us
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="output" class="absolute bottom-4 left-4 right-4 bg-white p-4 rounded shadow-md hidden"></div>
+    <script src="renderer.js"></script>
+</body>
+</html>

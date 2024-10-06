@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    padding: 20px;
+}
+
+header h1 {
+    color: #61dafb;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #61dafb;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
+
+.hidden {
+    display: none;
+}
+
+#report-section {
+    margin-top: 40px;
+}
+
+#report-output {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    color: #61dafb;
+    white-space: pre-wrap;
+}
+
+.btn-save {
+    margin-top: 20px;
+    background-color: #21a1f1;
+}
+
+.btn-save:hover {
+    background-color: #1280d1;
+}
+
+#output {
+    max-height: 200px;
+    overflow-y: auto;
+}

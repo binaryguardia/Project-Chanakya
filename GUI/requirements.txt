@@ -1,0 +1,21 @@
+psutil==5.9.4           # For system health monitoring (CPU, Disk, Memory, etc.)
+scikit-learn==1.0.2     # For AI/ML model (Isolation Forest for anomaly detection)
+numpy==1.21.2           # Needed for data processing with AI/ML
+subprocess32==3.5.4     # To run FTK Imager, Sleuth Kit, or other disk tools
+
+# requirements.txt
+
+# Electron.js dependencies
+electron
+
+# Python dependencies
+scikit-learn
+numpy
+pandas
+matplotlib
+seaborn
+tensorflow
+scipy
+pywin32
+pyusb
+yara
