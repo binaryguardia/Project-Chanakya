@@ -24,7 +24,7 @@ Ensure you have the following software installed before proceeding:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/cyber-swipe.git
+git clone https://github.com/binaryguardia/Project-Chanakya/GUI
 cd cyber-swipe 
 ```
 ### Create a virtual environment 
