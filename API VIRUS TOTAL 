@@ -1,3 +1,10 @@
 1696a271de6c65e5d266cd0f0469c783fed0070bf220c60e87e98bdd6e142eea
 
 Api key of virus total
+
+instance = NEW_AI_instance(api_key=<your_virustotal_api_key>)
+instance.Start_Train()
+
+instance.Start_Prediction()
+
+instance.Terminate()
