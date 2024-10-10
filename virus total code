@@ -1,0 +1,61 @@
+import hashlib
+import struct
+import pandas as pd
+import tensorflow as tf
+import numpy as np
+import pickle
+import threading
+from virus_total_api import VirusTotalClass
+from csv_parser import CSVManager
+from exe_binary_parser import EXEBinaryParser, DatasetPreparation
+
+class AIInstance():
+    def __init__(self, vt_api_key: str = None, vt_csv_path: str = None, main_csv_path: str = None, save_index: str = None,
+                 non_malware_exe_dir: str = "./Normal_EXE/",  # Path to normal executable files
+                 run_parallel_for_non_malware: bool = True):  # Run parallel processing for non-malware
+
+        self.main_csv_lock = threading.Lock()  # Lock for accessing main CSV
+        self.vt_csv_lock = threading.Lock()  # Lock for accessing VirusTotal CSV
+        self.model_lock = threading.Lock()  # Lock for model saving/loading
+        self.extra_save_lock = threading.Lock()  # Lock for saving/loading extra data
+
+        # Ensure required parameters are provided
+        if vt_api_key is None or main_csv_path is None or save_index is None or vt_csv_path is None:
+            print("Some of the required constructor parameters are missing.")
+            return
+
+        # Store the VirusTotal API key
+        self.vt_api_key = vt_api_key
+        self.vt_csv_path = vt_csv_path
+        self.main_csv_path = main_csv_path
+        self.save_index = save_index
+
+        # Initialize VirusTotal API instance using the provided API key
+        self.vt_instance = VirusTotalClass(api_key=self.vt_api_key)
+
+        # Initialize CSV managers for main CSV and VirusTotal CSV
+        self.main_csv_manager = CSVManager(input_csv_path=self.main_csv_path)
+        self.vt_csv_manager = CSVManager(input_csv_path=self.vt_csv_path)
+
+        # Thread for parallel processing malware dataset
+        self.parallel_for_malware_thread: threading.Thread = None
+        self.parallel_for_malware_thread_terminated = False
+        print("[Parallel Thread Started] -> self.parallel_for_malware_thread")
+
+    def process_malware(self):
+        """Method to process malware using VirusTotal API"""
+        # Example implementation for interacting with VirusTotal API and processing results
+        print("Processing malware files with VirusTotal API.")
+        # This is where you'd interact with VirusTotal using the API key
+        # Example:
+        # response = self.vt_instance.scan_file('path_to_malware_file')
+        # self.handle_vt_response(response)
+
+    def process_non_malware(self):
+        """Method to process non-malware files."""
+        print("Processing non-malware files.")
+
+    def handle_vt_response(self, response):
+        """Method to handle the response from VirusTotal API"""
+        print(f"VirusTotal API response: {response}")
+        # Handle and log the VirusTotal response
